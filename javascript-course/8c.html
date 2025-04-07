@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Variables</title>
+  </head>
+  <body>
+    <button onclick="
+      playGame('heads');
+    ">heads</button>
+    <button onclick="
+      playGame('tails');
+    ">tails</button>
+    <button onclick="
+    score.wins = 0;
+    score.losses = 0;
+      localStorage.removeItem('scoreGuess');
+      console.log('Record was Cleared')
+    ">Clear</button>
+    
+    <script>
+      const score = JSON.parse(localStorage.getItem('scoreGuess')) || {
+        wins: 0, 
+        losses: 0
+      };
+      // const score = {
+      //   wins: 0,
+      //   losses: 0
+      // };
+      function playGame(guess) {
+        const number = Math.random();
+        const result = number >= 0.5 ? 'tails' : 'heads';
+        result === guess ? console.log('You win') : console.log('You lose');
+        if (result === guess) {
+          score.wins += 1;
+        } else {
+          score.losses += 1;
+        }
+
+        localStorage.setItem('scoreGuess', JSON.stringify(score));
+
+        console.log(score);
+      }
+      
+    </script>
+  </body>
+</html>
+
+
+
+

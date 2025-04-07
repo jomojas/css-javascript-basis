@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML CSS Review</title>
+    <style>
+      /*
+        This is a comment.
+      */
+      .red-button {
+        background-color: red;
+        color: white;
+        border: none;
+      }
+      .yellow-button {
+        background-color: yellow;
+      }
+      .orange-button {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      This is a comment.
+    -->
+    <p>
+      Adults Plain Cotton T-shirt
+    </p>
+    <p>
+      Price: $7.99
+    </p>
+    <button title="Buttons" class="yellow-button" onclick="
+      alert('Added');
+    ">
+      Add to cart
+    </button>
+    <button id="BuyButton" title="Buttons" class="orange-button">
+      Buy now
+    </button>
+
+    <script>
+      //alert('hello');
+      // Get the button element by its id.
+      const button = document.getElementById('BuyButton');
+      // Add an event listener to the button.
+      button.addEventListener('click', function() {
+        // Log a message to the console when the button is clicked.
+        console.log('Loading..');
+        // After 1 second, display the alert
+        setTimeout(function() {
+          alert('Purchased');
+        }, 1000)
+      })
+    </script>
+  </body>
+</html>
+
+
+
+
+
+

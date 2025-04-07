@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Variables</title>
+  </head>
+  <body>
+    <button onclick="
+      updateCartQuanity(0, 'Show');
+    ">Show Quanity</button>
+    
+    <button onclick="
+      updateCartQuanity(1, 'increment');
+    ">Add to cart</button>
+
+    <button onclick="
+      updateCartQuanity(2, 'increment');
+    ">+2</button>
+
+    <button onclick="
+      updateCartQuanity(3, 'increment');
+    ">+3</button>
+
+    <button onclick="
+      updateCartQuanity(4, 'increment');
+    ">+4</button>
+
+    <button onclick="
+      updateCartQuanity(5, 'increment');
+    ">+5</button>
+
+    <button onclick="
+      updateCartQuanity(1, 'decrement');
+    ">Remove from cart</button>
+
+    <button onclick="
+      updateCartQuanity(2, 'decrement');
+    ">-2</button>
+
+    <button onclick="
+      updateCartQuanity(3, 'decrement');
+    ">-3</button>
+
+    <button onclick="
+      updateCartQuanity(0, 'Reset');
+    ">Reset Cart</button>
+    <script>
+      let cartQuanity = 0;
+
+      // Function to decrement the value of cartQuanity
+      function updateCartQuanity(update, manipulation) {
+        if (manipulation === 'increment') {
+          if (cartQuanity + update > 10) {
+            alert('No enough space to store items');
+            console.log(`cart quanity: ${cartQuanity}`);
+            return;
+          } else {
+            cartQuanity += update;
+            console.log(`cart quanity: ${cartQuanity}`);
+          }
+        } else if (manipulation === 'decrement') {
+          if (cartQuanity < update) {
+            alert('No enough commodities to remove');
+            console.log(`cart quanity: ${cartQuanity}`);
+            return;
+          } else {
+            cartQuanity -= update;
+            console.log(`cart quanity: ${cartQuanity}`);
+          }
+        } else if (manipulation === 'Show') {
+          console.log(`cart quanity: ${cartQuanity}`);
+        } else if (manipulation === 'Reset') {
+          cartQuanity = 0;
+          console.log('Cart was reset');
+          console.log(`cart quanity: ${cartQuanity}`);
+        }
+      }
+    </script>
+  </body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+      const compareNumber = Math.random();
+      let computerResult = '';
+      let result = '';
+
+      if (compareNumber >= 0 && compareNumber < 1/3) {
+        computerResult = 'Rock';
+        result = 'Tie';
+      } else if (compareNumber >= 1/3 && compareNumber < 2/3) {
+        computerResult = 'Paper';
+        result = 'You lose';
+      } else if (compareNumber >= 2/3 && compareNumber < 1) {
+        computerResult = 'Scissors';
+        result = 'You win';
+      }
+
+      alert(`You picked Rock, The computer picked ${computerResult}, ${result}`);
+
+    ">Rock</button>
+
+    <button onclick="
+      const compareNumber = Math.random();
+      let computerResult = '';
+      let result = '';
+
+      if (compareNumber >= 0 && compareNumber < 1/3) {
+        computerResult = 'Rock';
+        result = 'You win';
+      } else if (compareNumber >= 1/3 && compareNumber < 2/3) {
+        computerResult = 'Paper';
+        result = 'Tie';
+      } else if (compareNumber >= 2/3 && compareNumber < 1) {
+        computerResult = 'Scissors';
+        result = 'You lose';
+      }
+
+      alert(`You picked Paper, The computer picked ${computerResult}, ${result}`); 
+    ">Paper</button>
+    
+    <button onclick="
+      const compareNumber = Math.random();
+      let computerResult = '';
+      let result = '';
+
+      if (compareNumber >= 0 && compareNumber < 1/3) {
+        computerResult = 'Rock';
+        result = 'You lose';
+      } else if (compareNumber >= 1/3 && compareNumber < 2/3) {
+        computerResult = 'Paper';
+        result = 'You win';
+      } else if (compareNumber >= 2/3 && compareNumber < 1) {
+        computerResult = 'Scissors';
+        result = 'Tie';
+      }
+
+      alert(`You picked Scissors, The computer picked ${computerResult}, ${result}`);
+    ">Scissors</button>
+
+    <script>
+      
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
