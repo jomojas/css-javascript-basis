@@ -22,7 +22,7 @@ body {
 
 .item {
     /* flexgrow flex-shrink flex-basis */
-    flex: 1; /* flex:1 0 0 display evenly)*/
+    flex: 1; /* flex:1 0 0 (display evenly)*/
     height: 100px;
     background: #254de4;
     color: #fff;
