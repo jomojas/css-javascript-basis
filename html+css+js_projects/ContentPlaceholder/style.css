@@ -95,7 +95,7 @@ img {
     width: 100%;
 }
 
-@Keyframes bgPos {
+@keyframes bgPos {
     0% {
         background-position: 50% 0;
     }
