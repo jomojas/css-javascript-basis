@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      const product = {
+        name: 'socks',
+        price: 1090,
+        'delivery-time': '1 day',
+        rating: {
+          stars: 4.5,
+          count: 87
+        },
+        fun: function function1() {
+          console.log('Hello');
+        }
+      };
+      /*
+      console.log(product);
+      console.log(product.name);
+      console.log(product['name']);
+      console.log(product['delivery-time']);
+      product.fun();
+      console.log(typeof console);
+      console.log(typeof console.log);
+     
+      product.newProperty = 9090;
+      console.log(product);
+      delete product.newProperty;
+      console.log(product);
+      */      
+      /*
+      console.log(product);
+      // Built-in objects: JSON, loaclStorage.
+      // Convert object to JSON format, which is a string (JSON only support string and doesn't support fcuntion, so the function in object is omitted)
+      // console.log(JSON.stringify(product));
+      
+      const jsonString = JSON.stringify(product);
+      console.log(jsonString);
+      console.log(typeof jsonString);
+      // Convert JSON format to javascript object
+      console.log(JSON.parse(jsonString));
+      */
+
+      console.log('hello'.length);
+      console.log('hello'.toUpperCase());
+
+      const object1 = {
+        message: 'hello'
+      };
+      // Copying the reference, object2 has the same reference as object1
+      const object2 = object1;
+      console.log(object2);
+      object1.message = 'world';
+      console.log(object1);
+      console.log(object2);
+
+      const object3 = {
+        message: 'world'
+      };
+      // false, object1 and object3 have different reference
+      console.log(object1 === object3); // Compare the reference (the address in memeory), not the value inside
+      const object4 = {
+        message: 'world',
+        price: 799
+      };
+      // const message = object4.message;
+      // const price = object4.message;
+      const { message, price } = object4;  // Shortcut to last two lines, when there are virables in object has the same name as the one you wanna delcare
+      console.log(message);
+      console.log(price);
+      // console.log(object4);
+
+      const object5 = {
+        // message: message  // message at the end is a existed variable, it's legal to use this to same name vairable in object
+        message, // Same to last line, one variable name could substitute two same vairable name
+        // method: function function1() {
+        //   console.log('method')
+        // },
+        method() {
+          console.log('method')
+        }   // same as last line (shortcut)
+      };
+      console.log(object5);
+      object5.method();
+    </script>
+  </body>
+</html>
+
+
+
+
+
+

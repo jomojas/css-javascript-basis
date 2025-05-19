@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Variables</title>
+  </head>
+  <body>
+    <button onclick="
+      console.log(`cart quanity: ${cartQuanity}`); 
+    ">Show Quanity</button>
+    
+    <button onclick="
+      cartQuanity++;
+      console.log(`cart quanity: ${cartQuanity}`);
+    ">Add to cart</button>
+
+    <button onclick="
+      cartQuanity += 2;
+      console.log(`cart quanity: ${cartQuanity}`);
+    ">+2</button>
+
+    <button onclick="
+      cartQuanity += 3;
+      console.log(`cart quanity: ${cartQuanity}`);
+    ">+3</button>
+
+    <button onclick="
+      cartQuanity += 4;
+      console.log(`cart quanity: ${cartQuanity}`);
+    ">+4</button>
+
+    <button onclick="
+      cartQuanity += 5;
+      console.log(`cart quanity: ${cartQuanity}`);
+    ">+5</button>
+
+    <button onclick="
+      decrement(1)
+      // cartQuanity--;
+      // console.log(`cart quanity: ${cartQuanity}`);
+    ">Remove from cart</button>
+
+    <button onclick="
+      decrement(2)
+      // cartQuanity -= 2;
+      // console.log(`cart quanity: ${cartQuanity}`);
+    ">-2</button>
+
+    <button onclick="
+      decrement(3)
+      // cartQuanity -= 3;
+      // console.log(`cart quanity: ${cartQuanity}`);
+    ">-3</button>
+
+    <button onclick="
+      cartQuanity = 0;
+      console.log(`Cart was reset`);
+      console.log(`cart quanity: ${cartQuanity}`);
+    ">Reset Cart</button>
+    <script>
+      let cartQuanity = 0;
+
+      // Function to decrement the value of cartQuanity
+      function decrement(value) {
+        if (cartQuanity < value) {
+          console.log(alert('No enough commodities to remove'));
+          console.log(`cart quanity: ${cartQuanity}`);
+          return;
+        }
+        switch (value) {
+          case 1:
+            if (cartQuanity >= 1) cartQuanity--;
+            console.log(`cart quanity: ${cartQuanity}`);
+            break;
+          case 2:
+            if (cartQuanity >= 2) cartQuanity -= 2;
+            console.log(`cart quanity: ${cartQuanity}`);
+            break;
+          case 3:
+            if (cartQuanity >= 3) cartQuanity -= 3;
+            console.log(`cart quanity: ${cartQuanity}`);
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
